@@ -1,3 +1,6 @@
+import { NgIf } from "@angular/common";
+import { ɵCodegenComponentFactoryResolver } from "@angular/core";
+
 export class Satellite {
 
 	name: string;
@@ -15,7 +18,9 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
+		if (this.type === "Space Debris") {
+			return true;
+		}
    }
 
 }
